@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abas Navegação</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: black;
+            font-family: 'Consolas';
+        }
+
+        .nav_tabs{
+            width: 600px;
+            height: 400px;
+            margin: 100px auto;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .nav_tabs ul{
+            list-style: none;
+        }
+
+        .nav_tabs ul li{
+            float: left;
+        }
+
+        .nav_tabs label{
+            width: 100px;
+            padding: 25px;
+            background-color: #363b48;
+            display: block;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .rd_tabs:checked ~ label{
+            background-color: #e54e43;
+        }
+
+        .rd_tabs{
+            display: none;
+        }
+
+        .content{
+            border-top: 5px solid #e54e43;
+            background-color: white;
+            display: none;
+            position: absolute;
+            height: 320px;
+            width: 600px;
+            left: 0;
+        }
+
+        .content article{
+            padding: 10px;
+        }
+
+        .rd_tabs:checked ~ .content{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="nav_tabs">
+        <ul>
+
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab1" checked>
+                <label for= "tab1">Tab 1</label>
+                <div class="content">
+                    <article>
+                        Console.WriteLine("Hello, world");
+                    </article>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab2">
+                <label for= "tab2">Tab 2</label>
+                <div class="content">
+                    <article>
+                        Console.WriteLine("Ola, Mundo");
+                    </article>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab3">
+                <label for= "tab3">Tab 3</label>
+                <div class="content">
+                    <article>
+                        Console.WriteLine("ハローワールド");
+                    </article>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+                <label for= "tab4">Tab 4</label>
+                <div class="content">
+                    <article>
+                        Console.WriteLine("Hola mundo");
+                    </article>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+</body>
+</html>
